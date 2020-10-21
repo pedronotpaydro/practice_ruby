@@ -10,11 +10,11 @@ class Veggiegarden
   attr_reader :name, :color, :type
   attr_writer :price
 
-  def initialize(input_name, input_color, input_type, input_price)
-    @name = input_name
-    @color = input_color
-    @type = input_type
-    @price = input_price
+  def initialize(input_options)
+    @name = input_options[:name]
+    @color = input_options[:color]
+    @type = input_options[:type]
+    @price = input_options[:price]
   end
 
   def print_info
@@ -26,9 +26,9 @@ class Veggiegarden
   end
 end
 
-peppers = Veggiegarden.new("Jalapenos", "Green", "Vegetable", 0.25)
-hops = Veggiegarden.new("Cashmere", "light green", "Weed", 4.00)
-rosemary = Veggiegarden.new("Rosemary", "Green,", "Herb", 1.50)
+peppers = Veggiegarden.new({ name: "Jalapenos", color: "Green", type: "Vegetable", price: 0.25 })
+hops = Veggiegarden.new(name: "Cashmere", color: "light green", type: "Weed", price: 4.00)
+rosemary = Veggiegarden.new(name: "Rosemary", color: "Green,", type: "Herb", price: 1.50)
 peppers.price = 0.50
 
 p peppers.print_info
