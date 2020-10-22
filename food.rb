@@ -1,3 +1,5 @@
+require "./store_item.rb"
+
 class Food < Veggiegarden
   def initialize(input_options)
     super

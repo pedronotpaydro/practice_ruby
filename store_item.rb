@@ -1,3 +1,5 @@
+
+
 class Veggiegarden
   attr_reader :name, :color, :type
   attr_writer :price
@@ -17,3 +19,5 @@ class Veggiegarden
     @price
   end
 end
+
+
